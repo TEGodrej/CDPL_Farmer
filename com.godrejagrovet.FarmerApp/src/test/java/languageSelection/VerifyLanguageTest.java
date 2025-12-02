@@ -1,5 +1,7 @@
 package languageSelection;
 
+import java.util.Scanner;
+
 import org.testng.annotations.Test;
 
 import GenericUtilities.BaseClass;
@@ -105,5 +107,32 @@ public class VerifyLanguageTest extends BaseClass{
 	}
 
 
+	@Test
+	public void VerifyAbilityToChangeLanguageFromSettings() {
+		String MobileNumber="9354029690";
+		
+			driverUtility.implicitlyWait(50);
+			languageScreen.clickOnEnglishOption();
+			getStartedScreen.verifyEnglishLanguage();
+			gestureUtility.clickByAxes(660, 602);
+			getStartedScreen.sendKeyToMobileNumberTextField(MobileNumber);
+			getStartedScreen.clickOnsendOtpButton();
+			try (Scanner sc = new Scanner(System.in)) {
+				System.out.println("Enter OTP");
+				String otp = sc.next();
+				driverUtility.threadWait(10);
+			otpScreen.sendkeyToFirstTextBox(String.valueOf(otp.charAt(0)));
+			otpScreen.sendkeyToSecondTextBox(String.valueOf(otp.charAt(1)));
+			otpScreen.sendkeyToThirdTextBox(String.valueOf(otp.charAt(2)));
+			otpScreen.sendkeyToForthTextBox(String.valueOf(otp.charAt(3)));
+		}
+//		otpScreen.clickOnVerifyOtpButton();
+//		homeScreen.clickOnProfileDropButton();
+//		profileScreen.clickOnLanguageOption();
+//		
+//		languageScreen.clickOnHindiOption();
+	}
+
+	
 
 }

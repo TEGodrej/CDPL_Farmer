@@ -8,8 +8,12 @@ import java.sql.Connection;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeMethod;
 
+import ObjectRepository.AccountDetailScreen;
 import ObjectRepository.GetStartedScreen;
+import ObjectRepository.HomeScreen;
 import ObjectRepository.LanguageScreen;
+import ObjectRepository.OtpScreen;
+import ObjectRepository.ProfileScreen;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
@@ -33,6 +37,10 @@ public class BaseClass {
 	public  AppiumDriverLocalService service ;
 	public  LanguageScreen languageScreen;
 	public  GetStartedScreen getStartedScreen;
+	public  HomeScreen  homeScreen;
+	public  ProfileScreen  profileScreen;
+	public OtpScreen otpScreen;
+	public AccountDetailScreen accountDetailScreen;
 	
 	
 
@@ -93,7 +101,9 @@ public class BaseClass {
 			excelUtility         = new ExcelUtility();
 			languageScreen       = new LanguageScreen(driver);
 			getStartedScreen     = new GetStartedScreen(driver);
-		        
+			homeScreen           = new HomeScreen(driver);
+			otpScreen            = new OtpScreen(driver);
+			accountDetailScreen  = new AccountDetailScreen(driver);
 		}
 		
 		/**
