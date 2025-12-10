@@ -1,5 +1,7 @@
 package ObjectRepository;
 
+import java.util.Scanner;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -14,7 +16,7 @@ public class OtpScreen {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "(//android.view.ViewGroup[@resource-id='otp-input'])[1]")
+	@FindBy(xpath = "(//android.view.ViewGroup[@resource-id=\"otp-input\"])[1]")
 	private WebElement firstTextBox;
 	
 	@FindBy(xpath = "(//android.view.ViewGroup[@resource-id='otp-input'])[2]")
@@ -32,36 +34,48 @@ public class OtpScreen {
 	@FindBy(xpath = "//android.widget.TextView[@text='Resend']")
 	private WebElement resendOption;
 	
-	public void sendkeyToFirstTextBox(String otp) {
-		try {
-			
-	        firstTextBox.sendKeys(otp);
+	@FindBy(xpath = "//android.widget.TextView[@text='Please enter a valid 4-digit OTP']")
+	private WebElement emptyOTP_Message;
+	
+	@FindBy(xpath = "//android.widget.TextView[@resource-id='toastText2']")
+	private WebElement invalid_OTP_ErrorMessage;
+	
+	
+	public void sendkeyToFirstTextBox() {
+		try (Scanner sc = new Scanner(System.in)) {
+			System.out.println("Enter firstOTP:");
+			String firstOTP = sc.nextLine(); 
+			firstTextBox.click();
+	        firstTextBox.sendKeys(firstOTP);
 	        System.out.println("Entered first OTP");
 	    } catch (Exception e) {
 	        System.out.println("Not able to enter OTP: " + e);
 	    }
 	}
 	
-	public void sendkeyToSecondTextBox(String otp) {
-		try {
-	        secondTextBox.sendKeys(otp);
+	public void sendkeyToSecondTextBox() {
+		try (Scanner sc = new Scanner(System.in)) {
+			String secondOTP =sc.next();
+	        secondTextBox.sendKeys(secondOTP);
 	        System.out.println("Entered second OTP");
 	    } catch (Exception e) {
 	        System.out.println("Not able to enter OTP: " + e);
 	    }
 	} 
 	
-	public void sendkeyToThirdTextBox(String otp) {
-		try {
-	        thirdTextBox.sendKeys(otp);
+	public void sendkeyToThirdTextBox() {
+		try (Scanner sc = new Scanner(System.in)) {
+			String thirdOTP =sc.next();
+	        thirdTextBox.sendKeys(thirdOTP);
 	        System.out.println("Entered thrid OTP");
 	    } catch (Exception e) {
 	        System.out.println("Not able to enter OTP: " + e);
 	    }
 	} 
-	public void sendkeyToForthTextBox(String otp) {
-		try {
-	        forthTextBox.sendKeys(otp);
+	public void sendkeyToForthTextBox() {
+		try (Scanner sc = new Scanner(System.in)) {
+			String forthOTP =sc.next();
+	        forthTextBox.sendKeys(forthOTP);
 	        System.out.println("Entered forth OTP");
 	    } catch (Exception e) {
 	        System.out.println("Not able to enter OTP: " + e);
@@ -83,6 +97,26 @@ public class OtpScreen {
 			System.out.println("Clicked on Resend Option");
 		} catch (Exception e) {
 			System.out.println("Not able to click on Resend Option "+e);
+		}
+	}
+	
+	public void verifyEmptyOTP_Message() {
+		try {
+			if(emptyOTP_Message.isDisplayed()) {
+				System.out.println("You have not entered OTP");
+			}
+		} catch (Exception e) {
+			System.out.println("Got issue in OTP "+e);
+		}
+	}
+	
+	public void verifyInvalid_OTP_ErrorMessage() {
+		try {
+			if(invalid_OTP_ErrorMessage.isDisplayed()) {
+				System.out.println("Entered OTP is invalid ; Please provide valid OTP ");
+			}
+		} catch (Exception e) {
+			System.out.println("Not able to enter OTP "+e);
 		}
 	}
 }

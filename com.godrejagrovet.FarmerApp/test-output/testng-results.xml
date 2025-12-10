@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="9" total="10" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-20T16:02:10 IST" name="Default suite" finished-at="2025-11-20T16:02:43 IST" duration-ms="33119">
+  <suite started-at="2025-12-04T11:31:35 IST" name="Default suite" finished-at="2025-12-04T11:32:28 IST" duration-ms="53344">
     <groups>
     </groups>
-    <test started-at="2025-11-20T16:02:10 IST" name="Default test" finished-at="2025-11-20T16:02:43 IST" duration-ms="33119">
-      <class name="languageSelection.verifyBillMilkFunctionality">
-        <test-method is-config="true" signature="startApp()[pri:0, instance:languageSelection.verifyBillMilkFunctionality@b2c9a9c]" started-at="2025-11-20T16:02:10 IST" name="startApp" finished-at="2025-11-20T16:02:33 IST" duration-ms="23414" status="PASS">
+    <test started-at="2025-12-04T11:31:35 IST" name="Default test" finished-at="2025-12-04T11:32:28 IST" duration-ms="53344">
+      <class name="languageSelection.VerifyLanguageTest">
+        <test-method is-config="true" signature="startApp()[pri:0, instance:languageSelection.VerifyLanguageTest@131ef10]" started-at="2025-12-04T11:31:35 IST" name="startApp" finished-at="2025-12-04T11:31:51 IST" duration-ms="16361" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startApp -->
-        <test-method signature="selectDateRange()[pri:0, instance:languageSelection.verifyBillMilkFunctionality@b2c9a9c]" started-at="2025-11-20T16:02:33 IST" name="selectDateRange" finished-at="2025-11-20T16:02:43 IST" duration-ms="9663" status="PASS">
+        <test-method signature="VerifyAbilityToChangeLanguageFromSettings()[pri:0, instance:languageSelection.VerifyLanguageTest@131ef10]" started-at="2025-12-04T11:31:51 IST" name="VerifyAbilityToChangeLanguageFromSettings" finished-at="2025-12-04T11:32:28 IST" duration-ms="36957" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectDateRange -->
-      </class> <!-- languageSelection.verifyBillMilkFunctionality -->
+        </test-method> <!-- VerifyAbilityToChangeLanguageFromSettings -->
+      </class> <!-- languageSelection.VerifyLanguageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

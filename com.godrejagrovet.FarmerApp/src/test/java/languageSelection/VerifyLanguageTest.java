@@ -1,6 +1,5 @@
 package languageSelection;
 
-import java.util.Scanner;
 
 import org.testng.annotations.Test;
 
@@ -112,26 +111,58 @@ public class VerifyLanguageTest extends BaseClass{
 		String MobileNumber="9354029690";
 		
 			driverUtility.implicitlyWait(50);
-			languageScreen.clickOnEnglishOption();
-			getStartedScreen.verifyEnglishLanguage();
-			gestureUtility.clickByAxes(660, 602);
+//			languageScreen.clickOnEnglishOption();
+//			getStartedScreen.verifyEnglishLanguage();
+//			gestureUtility.clickByAxes(660, 602);
 			getStartedScreen.sendKeyToMobileNumberTextField(MobileNumber);
 			getStartedScreen.clickOnsendOtpButton();
-			try (Scanner sc = new Scanner(System.in)) {
-				System.out.println("Enter OTP");
-				String otp = sc.next();
-				driverUtility.threadWait(10);
-			otpScreen.sendkeyToFirstTextBox(String.valueOf(otp.charAt(0)));
-			otpScreen.sendkeyToSecondTextBox(String.valueOf(otp.charAt(1)));
-			otpScreen.sendkeyToThirdTextBox(String.valueOf(otp.charAt(2)));
-			otpScreen.sendkeyToForthTextBox(String.valueOf(otp.charAt(3)));
-		}
+			
+
+		    otpScreen.sendkeyToFirstTextBox();
+		    otpScreen.sendkeyToSecondTextBox();
+		    otpScreen.sendkeyToThirdTextBox();
+		    otpScreen.sendkeyToForthTextBox();
 //		otpScreen.clickOnVerifyOtpButton();
 //		homeScreen.clickOnProfileDropButton();
 //		profileScreen.clickOnLanguageOption();
 //		
 //		languageScreen.clickOnHindiOption();
 	}
+	
+	@Test
+	public void verifyBehaviorWhenNoInternetDuringSelection() {
+		driverUtility.implicitlyWait(6);
+		driverUtility.turnOffWifi();
+		languageScreen.clickOnEnglishOption();
+		driverUtility.turnOnWifi();
+	}
+	
+	@Test
+	public void VerifyAppBehaviorOnDoubleTappingLanguage() {
+		driverUtility.implicitlyWait(10);
+		gestureUtility.doubleClick(languageScreen.getEnglishOption());
+		
+	}
+	
+	@Test
+	public void verifyScreenDuringOrientationChange() {
+		driverUtility.implicitlyWait(10);
+		driverUtility.orientationPortrait();
+	}
+	
+	@Test
+	public void verifyBehaviorWhenPressingBack() {
+		driverUtility.implicitlyWait(10);
+		getStartedScreen.clickOnBackButton();
+		languageScreen.clickOnHindiOption();
+		driverUtility.closeApp();
+		driverUtility.activateApp("com.farmingapp");
+		getStartedScreen.verifyHindiLanguage();
+	}
+
+
+
+
 
 	
 

@@ -15,43 +15,46 @@ public class LanguageScreen {
 	}
 
 	
-	@FindBy(xpath = "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.View")
+	@FindBy(xpath = "//android.view.ViewGroup[@content-desc='मराठी']/android.view.ViewGroup/android.view.ViewGroup[2]")
 	private WebElement marathiOption;
 	
-	@FindBy(xpath = "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.View")
+	@FindBy(xpath = "//android.view.ViewGroup[@content-desc='हिंदी']/android.view.ViewGroup/android.view.ViewGroup[2]")
 	private WebElement hindiOption;
 	
-	@FindBy(xpath = "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup/android.view.ViewGroup/android.view.View")
+	@FindBy(xpath = "//android.view.ViewGroup[@content-desc='తెలుగు']/android.view.ViewGroup/android.view.ViewGroup[2]")
 	private WebElement teluguOption;
 	
-	@FindBy(xpath = "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[7]/android.view.ViewGroup/android.view.ViewGroup/android.view.View")
+	@FindBy(xpath = "//android.view.ViewGroup[@content-desc='English']/android.view.ViewGroup/android.view.ViewGroup[2]")
 	private WebElement englishOption;
 	
-	@FindBy(xpath = "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[4]/android.view.ViewGroup/android.view.ViewGroup/android.view.View")
+	@FindBy(xpath = "//android.view.ViewGroup[@content-desc='ಕನ್ನಡ']/android.view.ViewGroup/android.view.ViewGroup[2]")
 	private WebElement tamilOption;
 	
-	@FindBy(xpath = "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[5]/android.view.ViewGroup/android.view.ViewGroup/android.view.View")
+	@FindBy(xpath = "//android.view.ViewGroup[@content-desc='தமிழ்']/android.view.ViewGroup/android.view.ViewGroup[2]")
 	private WebElement kanadaOption;
 	
-	@FindBy(xpath = "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[6]/android.view.ViewGroup/android.view.ViewGroup/android.view.View")
+	@FindBy(xpath = "//android.view.ViewGroup[@content-desc='മലയാളം']/android.view.ViewGroup/android.view.ViewGroup[2]")
 	private WebElement malyalamOption;
 	
-	@FindBy(xpath = "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[8]/android.view.ViewGroup/android.view.ViewGroup/android.view.View")
+	@FindBy(xpath = "//android.view.ViewGroup[@content-desc='ગુજરાતી']/android.view.ViewGroup/android.view.ViewGroup[2]")
 	private WebElement gujratiOption;
 	
-	@FindBy(xpath = "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[9]/android.view.ViewGroup/android.view.ViewGroup/android.view.View")
+	@FindBy(xpath = "//android.view.ViewGroup[@content-desc='বাংলা']/android.view.ViewGroup/android.view.ViewGroup[2]")
 	private WebElement banglaOption;
 	
-	@FindBy(xpath = "//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[10]/android.view.ViewGroup/android.view.ViewGroup/android.view.View")
+	@FindBy(xpath = "//android.view.ViewGroup[@content-desc='ਪੰਜਾਬੀ']/android.view.ViewGroup/android.view.ViewGroup[2]")
 	private WebElement punjabiOption;
 	
-	@FindBy(xpath = "//android.widget.TextView[@text=\"Let's Begin\"]")
+	@FindBy(xpath = "//android.widget.TextView[@text='Let's Begin']")
 	private WebElement startText;
 	
 	public WebElement getStartText() {
 		return startText;
 	}
 	
+	public WebElement getEnglishOption() {
+		return englishOption;
+	}
 	
 	public void clickOnMarathiOption() {
 		try {

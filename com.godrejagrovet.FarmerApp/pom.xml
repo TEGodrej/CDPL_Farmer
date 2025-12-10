@@ -49,6 +49,11 @@
     <artifactId>extentreports</artifactId>
     <version>4.0.9</version>
 </dependency>
+  	<dependency>
+  		<groupId>Agrovet.Samadhan.Grader</groupId>
+  		<artifactId>Agrovet.Samadhan.Grader</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+  	</dependency>
   </dependencies>
   
 

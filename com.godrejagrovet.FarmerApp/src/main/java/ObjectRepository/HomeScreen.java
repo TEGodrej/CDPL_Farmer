@@ -46,6 +46,9 @@ public class HomeScreen {
 	@FindBy(xpath = "//android.view.View[@content-desc=', Orders']")
 	private WebElement ordersTab;
 	
+	@FindBy(xpath = "//android.widget.TextView[@text='Logout']")
+	private WebElement logoutButton;
+	
 	public void clickOnProfileDropButton() {
 		try {
 			profileDropButton.click();
@@ -81,7 +84,7 @@ public class HomeScreen {
 	    LocalDate startDate = LocalDate.now();
 
 	    // End = +18 days
-	    LocalDate endDate = startDate.plusDays(19);
+	    LocalDate endDate = startDate.plusDays(1);
 
 	    // Format both dates with ordinal suffix
 	    String S_Date = formatDate.apply(startDate);
@@ -196,7 +199,17 @@ public class HomeScreen {
 			ordersTab.click();
 			System.out.println("Clicked on ordersTab");
 		} catch (Exception e) {
-			// TODO: handle exception
+			System.out.println("Not able to click on logoutButton "+e);
+		}
+	}
+	
+	public void verifylogoutButton() {
+		try {
+			if(logoutButton.isDisplayed()) {
+				System.out.println("You are on My Profile Screen");
+			}
+		} catch (Exception e) {
+			System.out.println("logout Button is not displayed");
 		}
 	}
 }

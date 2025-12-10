@@ -53,6 +53,22 @@ public class GetStartedScreen {
 	@FindBy(xpath = "//android.widget.TextView[@text='ਸ਼ੁਰੂ ਕਰੋ']")
 	private WebElement punjabiLanguage;
 	
+	@FindBy(xpath = "//android.widget.TextView[@text='Phone number is required']")
+	private WebElement emptyMobileNumberErrorMessage;
+	
+	@FindBy(xpath = "//android.widget.TextView[@text='Please check your network and try again.']")
+	private WebElement internetErrorMessage;
+	
+	@FindBy(xpath = "//android.widget.TextView[@resource-id='toastText1']")
+	private WebElement OtpErrorMessage;
+	
+	@FindBy(xpath = "//android.widget.TextView[@text='Phone number must be exactly 10 digits']")
+	private WebElement digitErrorMessage;
+	
+	public WebElement getSendOtpButton() {
+		return sendOtpButton;
+	}
+	
 	public void sendKeyToMobileNumberTextField(String key) {
 		try {
 			mobileNumberTextField.sendKeys(key);
@@ -157,6 +173,48 @@ public class GetStartedScreen {
 			System.out.println("App is responding in punjabiLanguage");
 		}else {
 			System.out.println("App is not responding in punjabiLanguage ");
+		}
+	}
+	
+	public void verifyEmptyMobileNumberErrorMessage() {
+		try {
+			if(emptyMobileNumberErrorMessage.isDisplayed()) {
+				System.out.println("Error message is displayed");
+			}else {
+				System.out.println("Error message is not displayed ");
+			}
+		} catch (Exception e) {
+			System.out.println("Error message is not displayed "+e);
+		}
+	}
+	
+	public void verifyInternetErrorMessage() {
+		try {
+			if(internetErrorMessage.isDisplayed()) {
+				System.out.println("You are not connected with internet");
+			}
+		} catch (Exception e) {
+			System.out.println("InternetErrorMessage is not displayed "+e);
+		}
+	}
+	
+	public void verifOtpErrorMessage() {
+		try {
+			if(OtpErrorMessage.isDisplayed()) {
+				System.out.println("OTP Error Message is displayed ");
+			}
+		} catch (Exception e) {
+			System.out.println("OTP Error Message is not displayed "+e);
+		}
+	}
+	
+	public void verifydigitErrorMessage() {
+		try {
+			if(digitErrorMessage.isDisplayed()) {
+				System.out.println("Please enter 10 digits number");
+			}
+		} catch (Exception e) {
+			System.out.println("10 digits number as required "+e);
 		}
 	}
 }

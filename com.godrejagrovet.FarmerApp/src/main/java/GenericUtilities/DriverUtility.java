@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.Set;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -227,4 +228,8 @@ public class DriverUtility {
 		}
 	}
 	
+	public void doubleClickAction(WebElement element) {
+		Actions action = new Actions(driver);
+		action.doubleClick();
+	}
 }
